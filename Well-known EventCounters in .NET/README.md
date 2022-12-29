@@ -2,6 +2,9 @@
 
 https://learn.microsoft.com/en-us/dotnet/core/diagnostics/available-counters
 
+![Dashboard](well_known_metrics_net_dashboard.png?raw=true "Dashboard")
+
+
 ## Based on:
 * systemruntime_cpu_usage_ratio
 * systemruntime_working_set_byte

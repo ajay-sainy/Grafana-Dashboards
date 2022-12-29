@@ -1,0 +1,4217 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2396,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 45,
+      "panels": [],
+      "title": "DNS",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 46,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemnetnameresolution_dns_lookups_requested{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "DNS Lookups Requested",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 48,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemnetnameresolution_current_dns_lookups{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Current DNS Lookups",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "id": 47,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemnetnameresolution_dns_lookups_duration_ms{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "DNS Lookups Duration",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 29,
+      "panels": [],
+      "title": "Kestrel (Requests/Connections/TLS)",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 9,
+        "x": 0,
+        "y": 18
+      },
+      "id": 27,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcorehosting_requests_per_second{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Requests Per Second",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 9,
+        "x": 9,
+        "y": 18
+      },
+      "id": 40,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_connections_per_second{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Connections Per Second",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 18
+      },
+      "id": 31,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_tls_handshakes_per_second{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "TLS Handshakes Per Second",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 9,
+        "x": 0,
+        "y": 27
+      },
+      "id": 38,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcorehosting_current_requests{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Current Requests",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 9,
+        "x": 9,
+        "y": 27
+      },
+      "id": 35,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_current_connections{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Current Connections",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 18,
+        "y": 27
+      },
+      "id": 34,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_current_tls_handshakes{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Current TLS Handshakes",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 9,
+        "x": 0,
+        "y": 35
+      },
+      "id": 37,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcorehosting_total_requests{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Total Requests",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 9,
+        "x": 9,
+        "y": 35
+      },
+      "id": 43,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_total_connections{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Total Connections",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 18,
+        "y": 35
+      },
+      "id": 33,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_total_tls_handshakes{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Total TLS Handshakes",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 43
+      },
+      "id": 27,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_request_queue_length{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Request Queue Length",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 43
+      },
+      "id": 30,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_connection_queue_length{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Connection Queue Length",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 51
+      },
+      "id": 39,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcorehosting_failed_requests{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Failed Requests",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 51
+      },
+      "id": 36,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "microsoftaspnetcoreserverkestrel_failed_tls_handshakes{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Failed TLS Handshakes",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 59
+      },
+      "id": 42,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemnetsecurity_tls12_handshake_duration_ms{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "TLS 2 Handshake Duration (ms)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 59
+      },
+      "id": 41,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemnetsecurity_tls13_handshake_duration_ms{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "TLS 3 Handshake Duration (ms)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 67
+      },
+      "id": 50,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemnetsockets_outgoing_connections_established{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Outgoing Connections Established",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 67
+      },
+      "id": 49,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemnetsockets_incoming_connections_established{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Incoming Connections Established",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 75
+      },
+      "id": 22,
+      "panels": [],
+      "title": "Exceptions",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 76
+      },
+      "id": 25,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_exception_count{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Exception Count",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 84
+      },
+      "id": 9,
+      "panels": [],
+      "title": "Garbage Collection",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 85
+      },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_gen_0_size_bytes{kubernetes_pod_name=~\"$Pod\"}/1000000",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Gen 0 Size (MB)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 85
+      },
+      "id": 18,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_gen_0_gc_count{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Gen 0 GC Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 93
+      },
+      "id": 14,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_gen_1_size_bytes{kubernetes_pod_name=~\"$Pod\"}/1000000",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Gen 1 Size (MB)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 93
+      },
+      "id": 19,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_gen_1_gc_count{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Gen 1 GC Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 101
+      },
+      "id": 13,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_gen_2_size_bytes{kubernetes_pod_name=~\"$Pod\"}/1000000",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Gen 2 Size (MB)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 101
+      },
+      "id": 20,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_gen_2_gc_count{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Gen 2 GC Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 109
+      },
+      "id": 15,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_loh_size_bytes{kubernetes_pod_name=~\"$Pod\"}/1000000",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Large Object Heap (LOH) Size (MB)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 109
+      },
+      "id": 11,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_time_in_gc_ratio{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Time in GC since last GC",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 117
+      },
+      "id": 16,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_alloc_rate_bytes{kubernetes_pod_name=~\"$Pod\"}/1000000",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Allocation Rate (MB)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 117
+      },
+      "id": 17,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_gc_heap_size_bytes{kubernetes_pod_name=~\"$Pod\"}/1000000",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "GC Heap Size (MB)",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 125
+      },
+      "id": 4,
+      "panels": [],
+      "title": "Threads",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 126
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_threadpool_thread_count{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "interval": "",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Threadpool Thread Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 126
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_threadpool_queue_length{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "interval": "",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Threadpool Queue Length",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 135
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_threadpool_completed_items_count{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "interval": "",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Threadpool Completed Items",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${Datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 135
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "account": "",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${Datasource}"
+          },
+          "dimension": "",
+          "dimensionAggregate": [],
+          "dimensionFilters": [],
+          "dimensionQueryable": [],
+          "dimensionRegex": [],
+          "editorMode": "code",
+          "expr": "systemruntime_monitor_lock_contention_count{kubernetes_pod_name=~\"$Pod\"}",
+          "groupByUnit": "m",
+          "groupByValue": "1",
+          "healthHistoryValueTransform": "raw",
+          "healthQueryType": "Topology",
+          "interval": "",
+          "legendFormat": "{{kubernetes_pod_name}}",
+          "metric": "",
+          "metricsQueryType": "ui",
+          "missingDataBehavior": "keepMissingData",
+          "monitorUiType": "modal",
+          "namespace": "",
+          "orderAggFunc": "avg",
+          "orderBy": "desc",
+          "queryType": "metricsQuery",
+          "range": true,
+          "refId": "A",
+          "samplingType": "",
+          "service": "metrics",
+          "showTop": "40",
+          "useCustomSeriesNaming": false,
+          "useResourceVars": false
+        }
+      ],
+      "title": "Monitor Lock Contention Count",
+      "type": "timeseries"
+    }
+  ],
+  "schemaVersion": 37,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "Test - Dogfood",
+          "value": "Test - Dogfood"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Datasource",
+        "options": [],
+        "query": "prometheus",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "Test-westus2",
+          "value": "Test-westus2"
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${Datasource}"
+        },
+        "definition": "label_values(systemruntime_threadpool_queue_length{}, cluster)",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Cluster",
+        "options": [],
+        "query": {
+          "query": "label_values(systemruntime_threadpool_queue_length{}, cluster)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": [
+      
+          ],
+          "value": [
+      
+          ]
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${Datasource}"
+        },
+        "definition": "label_values(systemruntime_threadpool_queue_length{}, kubernetes_pod_name)",
+        "hide": 0,
+        "includeAll": false,
+        "multi": true,
+        "name": "Pod",
+        "options": [],
+        "query": {
+          "query": "label_values(systemruntime_threadpool_queue_length{}, kubernetes_pod_name)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dotnet Monitor",
+  "uid": "rrKzIpp4z",
+  "version": 18,
+  "weekStart": ""
+}
